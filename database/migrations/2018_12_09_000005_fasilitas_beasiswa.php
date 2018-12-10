@@ -20,7 +20,7 @@ class FasilitasBeasiswa extends Migration
             $table->timestamps();
 
             $table->primary(['id_beasiswa','id_fasilitas']);
-            $table->foreign('id_beasiswa')->references('id')->on('beasiswa');
+            $table->foreign('id_beasiswa')->references('id')->on('beasiswa')->onDelete('cascade');
             $table->foreign('id_fasilitas')->references('id')->on('fasilitas');
         });
     }

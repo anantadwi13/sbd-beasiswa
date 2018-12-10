@@ -20,7 +20,7 @@ class PersyaratanBeasiswa extends Migration
             $table->timestamps();
 
             $table->primary(['id_beasiswa','id_persyaratan']);
-            $table->foreign('id_beasiswa')->references('id')->on('beasiswa');
+            $table->foreign('id_beasiswa')->references('id')->on('beasiswa')->onDelete('cascade');
             $table->foreign('id_persyaratan')->references('id')->on('persyaratan');
         });
     }
