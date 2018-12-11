@@ -45,7 +45,7 @@
                                 <td></td>
                                 <td>{{$item->nama}}</td>
                                 <td>{{$item->perusahaan->nama}}</td>
-                                <td>{{date('d M Y H:i', strtotime($item->tgl_ditutup))}}</td>
+                                <td>{{$item->tgl_ditutup?date('d M Y H:i', strtotime($item->tgl_ditutup)):"-"}}</td>
                                 <td>
                                     <a href="{{route('dashboard.beasiswa.show', $item)}}" class="btn btn-primary">Detail</a>
                                     @if(Auth::check() && Auth::user()->type == \App\User::TYPE_ADMIN)
