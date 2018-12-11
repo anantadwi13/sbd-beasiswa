@@ -196,11 +196,11 @@ class BeasiswaController extends Controller
                         $beasiswa->persyaratan()->sync($attachPersyaratan);
                     }
                     if (!empty($fasilitas)) {
-                        $atachFasilitas = [];
+                        $attachFasilitas = [];
                         foreach ($fasilitas as $key => $item)
                             $attachFasilitas[$item['id']] = ['keterangan' => $item['keterangan'] ? $item['keterangan'] : ""];
 
-                        $beasiswa->fasilitas()->sync($atachFasilitas);
+                        $beasiswa->fasilitas()->sync($attachFasilitas);
                     }
 
                     return redirect(route('dashboard.beasiswa.index'))->with('success','Beasiswa berhasil diupdate!');
