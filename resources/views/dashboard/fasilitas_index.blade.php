@@ -28,7 +28,7 @@
         </div>
         <div class="col-lg-12 col-12">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body table-responsive">
                     <table id="table" class="table table-bordered table-striped">
                         <thead>
                         <tr>
