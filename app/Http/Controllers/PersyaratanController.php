@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 class PersyaratanController extends Controller
 {
     /**
+     * PersyaratanController constructor.
+     */
+    public function __construct()
+    {
+        $this->middleware('IsAdmin');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

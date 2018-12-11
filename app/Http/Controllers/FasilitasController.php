@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 class FasilitasController extends Controller
 {
     /**
+     * FasilitasController constructor.
+     */
+    public function __construct()
+    {
+        $this->middleware('IsAdmin');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

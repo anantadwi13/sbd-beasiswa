@@ -11,6 +11,14 @@ use Illuminate\Http\Request;
 class BeasiswaController extends Controller
 {
     /**
+     * BeasiswaController constructor.
+     */
+    public function __construct()
+    {
+        $this->middleware('IsAdmin')->except(['index','show']);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
